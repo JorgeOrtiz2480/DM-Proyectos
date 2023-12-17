@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Variables</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #5faac5;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .plot-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>Variables Visualization</h2>
+
+    <!-- Div para la gráfica de gases -->
+    <div class="plot-container" id="plot-container-gas">
+        <h3>GAS</h3>
+        {{ plot_html_gas|safe }}
+    </div>
+
+    <!-- Div para la gráfica de concentración de polvo -->
+    <div class="plot-container" id="plot-container-dust">
+        <h3>DUST</h3>
+        {{ plot_html_dust|safe }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check KPIs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 100px;
+        }
+        .kpi-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        a {
+            display: block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #555;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="kpi-container">
+        <h2>Check KPIs</h2>
+        <a href="{{ url_for('visualizar_media_kpi') }}">KPI's Average</a>
+        <a href="{{ url_for('visualizar_ultimo_registro') }}">Visualize Last Sample</a>
+    </div>
+</body>
+</html>

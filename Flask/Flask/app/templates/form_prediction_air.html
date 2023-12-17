@@ -1,0 +1,71 @@
+<!-- formulario_prediccion_air.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form (Air Overpressure)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+        h2 {
+            color: #007bff;
+        }
+        form {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-4">Enter the 8 values for Air-Overpressure prediction</h2>
+        <form method="post" action="/realizar_prediccion">
+            <input type="hidden" name="opcion" value="air-overpressure">
+            <div class="form-group">
+                <label for="valor1"> Impulse (I): </label>
+                <input type="number" name="valor1" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor2"> Air density (pa): </label>
+                <input type="number" name="valor2" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor3"> Positive Phase Duration (tp): </label>
+                <input type="number" name="valor3" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor4"> Peak Overpressure (pa): </label>
+                <input type="number" name="valor4" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor5"> Spacing (m): </label>
+                <input type="number" name="valor5" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor6"> Stemming (m^3): </label>
+                <input type="number" name="valor6" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor7"> Number of rows (explosive load): </label>
+                <input type="number" name="valor7" required step="any">
+            </div>
+            <div class="form-group">
+                <label for="valor8"> Air-overpressure (index): </label>
+                <input type="number" name="valor8" required step="any">
+            </div>
+            <button type="submit" class="btn btn-primary">Make prediction</button>
+        </form>
+    </div>
+</body>
+</html>
